@@ -35,7 +35,7 @@ import java.util.Properties;
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement
-@ComponentScan("ra.controller")
+@ComponentScan("ra")
 public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     private ApplicationContext applicationContext;
 
@@ -115,15 +115,15 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
         return properties;
     }
 
-    @Bean
-    public ICustomerService customerService() {
-        return new CustomerServiceIMPL();
-    }
-
-    @Bean
-    public IProvinceService provinceService() {
-        return new ProvinceServiceIMPL();
-    }
+//    @Bean
+//    public ICustomerService customerService() {
+//        return new CustomerServiceIMPL();
+//    }
+//
+//    @Bean
+//    public IProvinceService provinceService() {
+//        return new ProvinceServiceIMPL();
+//    }
 
     @Override
     public void addFormatters(FormatterRegistry registry) {
